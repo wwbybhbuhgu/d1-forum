@@ -3,6 +3,10 @@
 	"main": "src/index.ts",
 	"name": "d1-forum",
 	"upload_source_maps": true,
+	"vars": {
+		"RESEND_API_KEY": "",
+		"ADMIN_EMAIL": "admin@wujunbo.top"
+	},
 	"d1_databases": [
 		{
 			"binding": "DB",
