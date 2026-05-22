@@ -45,8 +45,14 @@ interface Session {
     expires_at: string;
 }
 
-// Initialize Resend
-const resend = new Resend((globalThis as any).RESEND_API_KEY || '');
+// Initialize Resend lazily
+function getResend() {
+    const apiKey = (globalThis as any).RESEND_API_KEY || '';
+    if (!apiKey) {
+        throw new Error('Missing RESEND_API_KEY environment variable');
+    }
+    return new Resend(apiKey);
+}
 
 // Helper functions
 function generateVerificationCode(): string {
@@ -90,6 +96,7 @@ async function sendVerificationEmail(email: string, code: string, purpose: strin
     `;
 
     try {
+        const resend = getResend();
         const { data, error } = await resend.emails.send({
             from: `Forum <noreply@wujunbo.top>`,
             to: [email],

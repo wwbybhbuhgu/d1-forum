@@ -7,65 +7,84 @@ dist/
 build/
 target/
 
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.py.class
+.Python
+env/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Logs
+*.log
 
 # Temporary files
 *.tmp
+*.temp
+*.bak
 *.swp
-*.swo
-
-# OS
+*~
 .DS_Store
 Thumbs.db
 
+# IDE
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
 # Coverage
+.coverage
 coverage/
 htmlcov/
-.coverage
+
+# Distribution / packaging
+.Python
+_build/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # MyPy
 .mypy_cache/
+.dmypy.json
+dmypy.json
 
 # Pytest
 .pytest_cache/
 
 # Compressed files
 *.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
 *.gz
-*.tar
-*.tgz
+*.rar
+*.7z
 *.bz2
 *.xz
-*.7z
-*.rar
-*.zst
+*.Z
+*.lz
 *.lz4
 *.lzh
 *.cab
 *.arj
 *.rpm
 *.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+*.zst
 ```
