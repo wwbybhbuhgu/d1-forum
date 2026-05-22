@@ -1,0 +1,16 @@
+{
+	"compatibility_date": "2025-10-08",
+	"main": "src/index.ts",
+	"name": "d1-forum",
+	"upload_source_maps": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_id": "df489db3-97ec-4de2-bc87-4c37addae847",
+			"database_name": "forum"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}
