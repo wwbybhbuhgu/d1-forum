@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/" style="color: white;">Forum</a></h1>
+            <nav id="nav-menu">
+                <!-- Nav items will be injected by JS -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="alert-container"></div>
+            
+            <div class="card">
+                <div class="card-header d-flex justify-between align-center">
+                    <h2 class="card-title">Recent Posts</h2>
+                    <button id="new-post-btn" class="btn btn-primary" style="display: none;">New Post</button>
+                </div>
+                <div id="posts-list">
+                    <p>Loading posts...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- New Post Modal -->
+    <div id="new-post-modal" class="modal-overlay" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Create New Post</h3>
+                <button class="modal-close" onclick="closeModal('new-post-modal')">&times;</button>
+            </div>
+            <form id="new-post-form">
+                <div class="form-group">
+                    <label for="post-title">Title</label>
+                    <input type="text" id="post-title" class="form-control" required minlength="3" maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label for="post-content">Content</label>
+                    <textarea id="post-content" class="form-control" rows="8" required minlength="10"></textarea>
+                </div>
+                <div class="text-right">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('new-post-modal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+</html>

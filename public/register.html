@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Forum</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/" style="color: white;">Forum</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Register</h2>
+                
+                <div id="alert-container"></div>
+                
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="button" id="send-code-btn" class="btn btn-outline" style="width: 100%;">Send Verification Code</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="code">Verification Code</label>
+                        <input type="text" id="code" class="form-control" placeholder="Enter code from email" maxlength="6" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" required minlength="6" placeholder="At least 6 characters">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control" required minlength="6" placeholder="Confirm your password">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="/login">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/register.js"></script>
+</body>
+</html>
